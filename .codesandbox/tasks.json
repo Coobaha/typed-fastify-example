@@ -2,10 +2,6 @@
   // These tasks will run in order when initializing your CodeSandbox project.
   "setupTasks": [
     {
-      "name": "Install pnpm",
-      "command": "pnpm install -g pnpm@latest"
-    },
-    {
       "name": "Install Dependencies",
       "command": "pnpm install"
     }
