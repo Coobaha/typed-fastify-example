@@ -11,8 +11,7 @@
   "tasks": {
     "check:types": {
       "name": "check:types",
-      "command": "pnpm check:types",
-      "runAtStart": false
+      "command": "pnpm check:types"
     },
     "dev": {
       "name": "dev",
@@ -21,38 +20,31 @@
     },
     "dev:schema": {
       "name": "dev:schema",
-      "command": "pnpm dev:schema",
-      "runAtStart": false
+      "command": "pnpm dev:schema"
     },
     "dev:server": {
       "name": "dev:server",
-      "command": "pnpm dev:server",
-      "runAtStart": false
+      "command": "pnpm dev:server"
     },
     "dev:types": {
       "name": "dev:types",
-      "command": "pnpm dev:types",
-      "runAtStart": false
+      "command": "pnpm dev:types"
     },
     "gen:schema": {
       "name": "gen:schema",
-      "command": "pnpm gen:schema",
-      "runAtStart": false
+      "command": "pnpm gen:schema"
     },
     "start": {
       "name": "start",
-      "command": "pnpm start",
-      "runAtStart": false
+      "command": "pnpm start"
     },
     "test": {
       "name": "test",
-      "command": "pnpm test",
-      "runAtStart": false
+      "command": "pnpm test"
     },
     "test:watch": {
       "name": "test:watch",
-      "command": "pnpm test:watch",
-      "runAtStart": false
+      "command": "pnpm test:watch"
     }
   }
 }
