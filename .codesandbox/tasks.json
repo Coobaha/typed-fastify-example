@@ -13,6 +13,11 @@
       "name": "check:types",
       "command": "pnpm check:types"
     },
+    "test:watch": {
+      "name": "test:watch",
+      "command": "pnpm test:watch",
+      "runAtStart": true
+    },
     "dev": {
       "name": "dev",
       "command": "pnpm dev",
@@ -44,11 +49,6 @@
     "test": {
       "name": "test",
       "command": "pnpm test"
-    },
-    "test:watch": {
-      "name": "test:watch",
-      "command": "pnpm test:watch",
-      "runAtStart": true
     }
   }
 }
