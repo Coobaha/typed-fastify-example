@@ -11,7 +11,7 @@ test("GET /", async (t) => {
   });
 
   assert.equal(response.statusCode, 200);
-  assert.deepEqual(response.json(), { id: 1, name: "John" });
+  assert.deepStrictEqual(response.json(), { id: 1, name: "John" });
 });
 
 test("GET /?name=error", async (t) => {
@@ -23,5 +23,22 @@ test("GET /?name=error", async (t) => {
   });
 
   assert.equal(response.statusCode, 404);
-  assert.deepEqual(response.json(), { code: 404, message: "Not Found" });
+  assert.deepStrictEqual(response.json(), { code: 404, message: "Not Found" });
+});
+
+test("GET /?name=1&name=2", async (t) => {
+  const app = build();
+
+  const response = await app.inject({
+    method: "GET",
+    url: "/?name=1&name=2",
+  });
+
+  assert.equal(response.statusCode, 400);
+  assert.deepStrictEqual(response.json(), {
+    error: "Bad Request",
+    message: "querystring/name must be string",
+    statusCode: 400,
+    code: "FST_ERR_VALIDATION",
+  });
 });
