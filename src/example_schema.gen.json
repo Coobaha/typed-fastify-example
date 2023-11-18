@@ -1,0 +1,72 @@
+{
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "example_schema",
+    "properties": {
+      "User": {
+        "type": "object",
+        "required": [
+          "id",
+          "name"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "id": {
+            "type": "number"
+          }
+        }
+      },
+      "ResponseError": {
+        "type": "object",
+        "required": [
+          "code",
+          "message"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "type": "object"
+  },
+  "fastify": {
+    "GET /": {
+      "request": {
+        "type": "object",
+        "required": [
+          "querystring"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "querystring": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "response": {
+        "200": {
+          "$ref": "example_schema#/properties/User"
+        },
+        "404": {
+          "$ref": "example_schema#/properties/ResponseError"
+        }
+      }
+    }
+  },
+  "$hash": "2da56f56a7cd1e088e2b4fb667da17e1523ec9ea10983f139735bea9edea55d6__v2.0.1"
+}
