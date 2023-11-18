@@ -47,7 +47,8 @@
     },
     "test:watch": {
       "name": "test:watch",
-      "command": "pnpm test:watch"
+      "command": "pnpm test:watch",
+      "runAtStart": true
     }
   }
 }

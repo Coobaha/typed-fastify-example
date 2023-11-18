@@ -28,8 +28,8 @@
     "dev:types": "nodemon --watch src/**/*.ts --exec \"pnpm check:types\"",
     "gen:schema": "tfs gen src/**_schema.ts",
     "start": "pnpm gen:schema; node --import tsx src/start.ts",
-    "test": "node --import tsx --test src/**/*.test.ts",
-    "test:watch": "pnpm run test -- --watch"
+    "test": "node --import tsx --test src/*.test.ts",
+    "test:watch": "node --import tsx --watch --test src/*.test.ts"
   },
   "type": "module",
   "packageManager": "pnpm@8.10.5"
