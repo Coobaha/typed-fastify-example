@@ -31,5 +31,6 @@
     "test": "node --import tsx --test src/**/*.test.ts",
     "test:watch": "pnpm run test -- --watch"
   },
-  "type": "module"
+  "type": "module",
+  "packageManager": "pnpm@8.10.5"
 }
