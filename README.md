@@ -2,6 +2,8 @@
 
 This examples shows how to use `@coobaha/typed-fastify` with `fastify`.
 
+Learn more https://github.com/Coobaha/typed-fastify
+
 ## Install
 
 ```bash
