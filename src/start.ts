@@ -1,5 +1,3 @@
-/* eslint strict:"off" */
-"use strict";
 import { build } from "./example_service.ts";
 import { FastifyInstance } from "fastify";
 
